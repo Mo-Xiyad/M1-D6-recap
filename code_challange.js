@@ -179,3 +179,11 @@ const dice = () => Math.floor(1, Math.random() * 5 + 1)
 
 const whoIsBigger = (num1, num2) => num1 > num2 ? num1 : num2
 // console.log(whoIsBigger(8, 5))
+
+/* Ex.3
+    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
+    Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
+*/
+
+const splitMe = (str) => str.split(' ')
+// console.log(splitMe("I love coding"))
