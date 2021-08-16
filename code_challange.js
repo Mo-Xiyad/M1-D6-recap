@@ -196,3 +196,19 @@ const deleteOne = (str, boolean) => boolean === true ? str.split('').slice(1).jo
 
 // console.log(deleteOne('string without the first letter', false))
 
+/* Ex.5
+   Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
+   Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
+*/
+
+const onlyLetters = function (str) {
+
+}
+// console.log(deleteOne("I have 4 dogs"))
+
+/* Ex.6 
+   Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
+*/
+
+const isThisAnEmail = (str) => (str.search('@') && !str.includes(' ')) ? true : false
+console.log(isThisAnEmail('validemail@address.com'))
