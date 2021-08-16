@@ -126,3 +126,10 @@ let test = 'First string'
 
 let sum = 10 + 20
 
+/* Ex.C 
+    Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
+*/
+
+let random = Math.floor(Math.random() * 20)
+console.log(random)
+
