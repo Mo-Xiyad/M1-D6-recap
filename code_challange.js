@@ -255,17 +255,30 @@ const rollTheDices = function (num) {
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
-const howManyDays = function (start) {
-    let date1 = new Date(start);
-    let date2 = new Date();
+const howManyDays = function (date) {
+    let inputDate = new Date(date);
+    let currentDate = new Date();
 
     let oneDay = 1000 * 60 * 60 * 24;
 
-    let diffInTime = date2.getTime() - date1.getTime();
+    let diffInTime = currentDate.getTime() - inputDate.getTime();
 
     let diffInDays = Math.round(diffInTime / oneDay);
 
     return diffInDays;
 }
-
 // console.log(howManyDays("2/1/2021"));
+
+/* Ex.10
+   Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
+*/
+const isTodayMyBirthday = function () {
+    let currentDate = new Date();
+    let birthDay = new Date('2021/08/16') // here you can insert your birthday 
+    if (currentDate.getDate() === birthDay.getDate() && currentDate.getDay() === birthDay.getDay() && currentDate.getFullYear() === birthDay.getFullYear()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isTodayMyBirthday())
