@@ -320,3 +320,11 @@ const olderMovie = function (movielist) {
 }
 // console.log(olderMovie(movies))
 
+
+/* Ex.13
+    Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
+*/
+
+const countMovies = (movie) => movie.length
+
+console.log(countMovies(movies))
