@@ -281,4 +281,24 @@ const isTodayMyBirthday = function () {
         return false;
     }
 }
-console.log(isTodayMyBirthday())
+// console.log(isTodayMyBirthday())
+
+
+// JS Arrays // Objs
+// NOTE: movies array is defined at the end of this file!
+
+/* Ex.11
+   Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
+*/
+let prop = {
+    name: 'Iron man costume',
+    quantity: 25,
+    id: 2,
+}
+const deleteProp = function (object, string) {
+    delete object[string]
+    return object
+}
+console.log(prop)
+// console.log(deleteProp(prop, 'id'))
+
