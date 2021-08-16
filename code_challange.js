@@ -211,4 +211,19 @@ const onlyLetters = function (str) {
 */
 
 const isThisAnEmail = (str) => (str.search('@') && !str.includes(' ')) ? true : false
-console.log(isThisAnEmail('validemail@address.com'))
+// console.log(isThisAnEmail('validemail@address.com'))
+
+
+/* Ex.7
+   Write a function called "whatDayIsIt" that should return the current day of the week.
+*/
+
+const whatDayIsIt = function () {
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    let date = new Date().getDay();
+    return days[date];
+}
+// console.log(whatDayIsIt())
+
+
+
