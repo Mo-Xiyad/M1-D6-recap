@@ -148,3 +148,10 @@ let me = {
 */
 
 delete me.age
+
+/* Ex.F 
+   Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
+*/
+
+let skills = ['python', 'JavaScript']
+skills.push(me)
