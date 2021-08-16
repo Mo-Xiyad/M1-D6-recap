@@ -187,3 +187,12 @@ const whoIsBigger = (num1, num2) => num1 > num2 ? num1 : num2
 
 const splitMe = (str) => str.split(' ')
 // console.log(splitMe("I love coding"))
+
+/* Ex.4
+    Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
+*/
+
+const deleteOne = (str, boolean) => boolean === true ? str.split('').slice(1).join('') : str.split('').slice(0, str.length - 1).join('')
+
+// console.log(deleteOne('string without the first letter', false))
+
