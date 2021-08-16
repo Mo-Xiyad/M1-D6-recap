@@ -170,7 +170,7 @@ me['skills'].pop()
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
 
-const dice = () => Math.floor(1, Math.random() * 5 + 1)
+const dice = () => Math.floor(Math.random() * 5 + 1)
 // console.log(dice())
 
 /* Ex.2 
@@ -226,4 +226,27 @@ const whatDayIsIt = function () {
 // console.log(whatDayIsIt())
 
 
+/* Ex.8
+    Write a function called "rollTheDices" which receives a number as a parameter.
+    It should invoke the dice() function defined in Ex1 the specified amount of times,
+    and return an object containing a "sum" property holding the sum of all values extracted
+    and a "values" array containing the single values of the dicerolls themselves.
+    Example: RollTheDices(3) => returns {
+        sum: 10
+        values: [3, 3, 4]
+    }
+*/
 
+const rollTheDices = function (num) {
+    let rollDicesInfo = {}
+    rollDicesInfo.sum = 0
+    rollDicesInfo.values = []
+    for (let i = 0; i < num; i++) {
+        rollDicesInfo.values[i] = dice()
+    }
+    for (let i = 0; i < rollDicesInfo.values.length; i++) {
+        rollDicesInfo.sum += rollDicesInfo.values[i]
+    }
+    return rollDicesInfo
+}
+console.log(rollTheDices(2))
