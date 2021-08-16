@@ -153,5 +153,19 @@ delete me.age
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
 
-let skills = ['python', 'JavaScript']
-skills.push(me)
+// let skills = ['python', 'JavaScript']
+// skills.push(me)
+
+me.skills = ['python', 'JavaScript']
+console.log(me)
+
+/* Ex.G
+   Programmatically remove the last skill from the "skills" array inside the "me" object.
+*/
+me['skills'].pop()
+// console.log(me['skills'])
+
+// JS Functions
+/* Ex.1
+    Write a function called "dice"; it should randomize an integer number between 1 and 6.
+*/
