@@ -299,6 +299,24 @@ const deleteProp = function (object, string) {
     delete object[string]
     return object
 }
-console.log(prop)
 // console.log(deleteProp(prop, 'id'))
+
+
+/* Ex.12 
+    Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
+*/
+
+const olderMovie = function (movielist) {
+    let olderMovies = [].sort()
+    let olderMoviesObj = {}
+    for (let i = 0; i < movielist.length; i++) {
+        if (movielist[i]['Year'] < olderMovies[0]) {
+            olderMoviesObj.olderMovie = movielist[i]
+        }
+        olderMovies.push(movielist[i]['Year'])
+    }
+    // return olderMovies.sort()[0];
+    return olderMoviesObj
+}
+// console.log(olderMovie(movies))
 
