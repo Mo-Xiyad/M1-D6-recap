@@ -173,6 +173,7 @@ me['skills'].pop()
 const dice = () => Math.floor(Math.random() * 5 + 1)
 // console.log(dice())
 
+
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
@@ -188,6 +189,7 @@ const whoIsBigger = (num1, num2) => num1 > num2 ? num1 : num2
 const splitMe = (str) => str.split(' ')
 // console.log(splitMe("I love coding"))
 
+
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
@@ -195,6 +197,7 @@ const splitMe = (str) => str.split(' ')
 const deleteOne = (str, boolean) => boolean === true ? str.split('').slice(1).join('') : str.split('').slice(0, str.length - 1).join('')
 
 // console.log(deleteOne('string without the first letter', false))
+
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
@@ -346,14 +349,7 @@ const onlyTheTitles = function (movies) {
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
-// arr.sort(function (a, b) {
-//     var keyA = new Date(a.updated_at),
-//         keyB = new Date(b.updated_at);
-//     // Compare the 2 dates
-//     if (keyA < keyB) return -1;
-//     if (keyA > keyB) return 1;
-//     return 0;
-// });
+
 const onlyInThisMillennium = function (movie) {
     let olderMovies = [].sort()
     let millennium = {}
@@ -367,4 +363,58 @@ const onlyInThisMillennium = function (movie) {
     }
     return millennium
 }
-console.log(onlyInThisMillennium(movies))
+// console.log(onlyInThisMillennium(movies))
+
+
+/* Ex.21
+  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
+  Example:
+  halfTree(3)
+  *
+  **
+  ***
+*/
+
+const halfTree = function (height) {
+    let leafs = '*'
+    let leafArray = []
+    for (let i = 0; i < height; i++) {
+
+        leafArray.push(leafs)
+        console.log(leafArray.join(''))
+    }
+    // return leafArray
+}
+// console.log(halfTree(3))
+
+
+/* Ex.22 
+  Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
+  Example: 
+  tree(3)
+    *  
+   *** 
+  *****
+*/
+
+const drawTree = function (h) {
+    for (let i = 0; i <= h; i++) {
+        var star = '';
+        //Changed to start high then decrease
+        for (let k = 1; k <= h - i; k++) {
+            //shortened to one space
+            star += " ";
+        };
+        for (var j = 0; j <= i; j++) {
+            //Added space so there is an odd number
+            //of symbols and the star above fits
+            //the space
+            star += " *";
+        };
+        //Moved into the loop
+        console.log(star);
+    };
+};
+
+// drawTree(5);
+
