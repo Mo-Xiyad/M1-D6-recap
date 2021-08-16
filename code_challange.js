@@ -142,3 +142,9 @@ let me = {
     surname: 'Mo',
     age: 25,
 }
+
+/* Ex.E 
+    Programmatically remove the age property from the previously create object.
+*/
+
+delete me.age
