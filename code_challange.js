@@ -172,3 +172,10 @@ me['skills'].pop()
 
 const dice = () => Math.floor(1, Math.random() * 5 + 1)
 // console.log(dice())
+
+/* Ex.2 
+    Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
+*/
+
+const whoIsBigger = (num1, num2) => num1 > num2 ? num1 : num2
+// console.log(whoIsBigger(8, 5))
