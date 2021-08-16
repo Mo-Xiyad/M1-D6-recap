@@ -131,7 +131,7 @@ let sum = 10 + 20
 */
 
 let random = Math.floor(Math.random() * 20)
-console.log(random)
+// console.log(random)
 
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
@@ -157,7 +157,7 @@ delete me.age
 // skills.push(me)
 
 me.skills = ['python', 'JavaScript']
-console.log(me)
+// console.log(me)
 
 /* Ex.G
    Programmatically remove the last skill from the "skills" array inside the "me" object.
@@ -169,3 +169,6 @@ me['skills'].pop()
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
+
+const dice = () => Math.floor(1, Math.random() * 5 + 1)
+// console.log(dice())
