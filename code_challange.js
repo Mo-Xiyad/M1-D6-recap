@@ -341,3 +341,30 @@ const onlyTheTitles = function (movies) {
     return titles
 }
 // console.log(onlyTheTitles(movies))
+
+
+/* Ex.15
+   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
+*/
+// arr.sort(function (a, b) {
+//     var keyA = new Date(a.updated_at),
+//         keyB = new Date(b.updated_at);
+//     // Compare the 2 dates
+//     if (keyA < keyB) return -1;
+//     if (keyA > keyB) return 1;
+//     return 0;
+// });
+const onlyInThisMillennium = function (movie) {
+    let olderMovies = [].sort()
+    let millennium = {}
+    for (let i = 0; i < movie.length; i++) {
+        olderMovies.push(movie[i]['Year'])
+        if (movie[i]['Year'] > '1990') {
+            for (let i = 0; i < movie.length; i++) {
+                millennium.millenniumMovie = movie[i]
+            }
+        }
+    }
+    return millennium
+}
+console.log(onlyInThisMillennium(movies))
