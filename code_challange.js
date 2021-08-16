@@ -249,4 +249,23 @@ const rollTheDices = function (num) {
     }
     return rollDicesInfo
 }
-console.log(rollTheDices(2))
+// console.log(rollTheDices(2))
+
+/* Ex.9
+   Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
+*/
+
+const howManyDays = function (start) {
+    let date1 = new Date(start);
+    let date2 = new Date();
+
+    let oneDay = 1000 * 60 * 60 * 24;
+
+    let diffInTime = date2.getTime() - date1.getTime();
+
+    let diffInDays = Math.round(diffInTime / oneDay);
+
+    return diffInDays;
+}
+
+// console.log(howManyDays("2/1/2021"));
