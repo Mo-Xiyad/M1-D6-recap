@@ -326,5 +326,18 @@ const olderMovie = function (movielist) {
 */
 
 const countMovies = (movie) => movie.length
+// console.log(countMovies(movies))
 
-console.log(countMovies(movies))
+
+/* Ex.14
+    Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
+*/
+
+const onlyTheTitles = function (movies) {
+    let titles = []
+    for (let i = 0; i < movies.length; i++) {
+        titles.push(movies[i]['Title'])
+    }
+    return titles
+}
+// console.log(onlyTheTitles(movies))
